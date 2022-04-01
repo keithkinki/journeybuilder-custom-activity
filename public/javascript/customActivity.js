@@ -85,30 +85,6 @@ function onRender() {
  * @param data
  */
 function initialize(data) {
-    if (data) {
-        payload = data;
-    }
-    const hasInArguments = Boolean(
-        payload['arguments'] &&
-        payload['arguments'].execute &&
-        payload['arguments'].execute.inArguments &&
-        payload['arguments'].execute.inArguments.length > 0
-    );
-
-    const inArguments = hasInArguments
-        ? payload['arguments'].execute.inArguments
-        : {};
-
-    $.each(inArguments, function (index, inArgument) {
-        $.each(inArgument, function (key, value) {
-            const $el = $('#' + key);
-            if($el.attr('type') === 'checkbox') {
-                $el.prop('checked', value === 'true');
-            } else {
-                $el.val(value);
-            }
-        });
-    });
 
 }
 
