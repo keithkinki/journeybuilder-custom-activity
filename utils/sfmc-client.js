@@ -37,6 +37,7 @@ const saveData = async (externalKey, data) => {
     }
   ).then(response => 
     {
+      console.log('kn2');
       console.log(response);
     }).catch(err => console.log(err));
 };
