@@ -34,13 +34,11 @@ const saveData = async (externalKey, data) => {
       },
       json: true,
       body: data
-    }, (err, response) => {
-      if (err) {
-        // error here
-        console.log(err);
-      }
     }
-  );
+  ).then(response => 
+    {
+      console.log(response);
+    }).catch(err => console.log(err));
 };
 
 module.exports = {
