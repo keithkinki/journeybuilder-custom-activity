@@ -41,7 +41,7 @@ exports.ui = (req, res) => {
  * @param req
  * @param res
  */
-exports.ui = (req, res) => {
+exports.step2 = (req, res) => {
   res.render('step2', {
     title: 'Sandbox'
   });
