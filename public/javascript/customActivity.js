@@ -1,5 +1,13 @@
 'use strict';
 
+var steps = [
+    // initialize to the same value as what's set in config.json for consistency
+    { key: "step1", label: "step1" },
+    { key: "step2", label: "step2" },
+    { key: "step3", label: "step3" }
+  ];
+var currentStep = steps[0].key;
+
 const validateForm = function(cb) {
     $form = $('.js-settings-form');
 
@@ -21,7 +29,8 @@ connection.on('initActivity', initialize);
 connection.on('requestedTokens', onGetTokens);
 connection.on('requestedEndpoints', onGetEndpoints);
 
-connection.on('clickedNext', save);
+//connection.on('clickedNext', save);
+connection.on('clickedNext', onClickedNext);
 
 const buttonSettings = {
     button: 'next',
@@ -29,6 +38,26 @@ const buttonSettings = {
     visible: true,
     enabled: false,
 };
+
+function onClickedNext() {
+  if (
+    (currentStep.key === "step1" && steps[2].active === false) ||
+    currentStep.key === "step3"
+  ) {
+    save();
+  } else {
+    connection.trigger("nextStep");
+  }
+}
+
+function onClickedBack() {
+  connection.trigger("prevStep");
+}
+
+function onGotoStep(step) {
+  showStep(step);
+  connection.trigger("ready");
+}
 
 function onRender() {
     connection.trigger('ready');
