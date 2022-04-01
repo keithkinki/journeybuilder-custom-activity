@@ -22,8 +22,8 @@ app.use(
 );
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+//app.set('views', path.join(__dirname, 'views'));
+//app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -45,8 +45,8 @@ app.use('/journey/publish/', activityRouter.publish);
 app.use('/journey/validate/', activityRouter.validate);
 
 // serve UI
-app.use('/', routes.ui);
-app.use('/step2/', routes.step2);
+//app.use('/', routes.ui);
+
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
