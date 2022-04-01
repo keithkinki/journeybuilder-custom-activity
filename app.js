@@ -46,6 +46,7 @@ app.use('/journey/validate/', activityRouter.validate);
 
 // serve UI
 app.use('/', routes.ui);
+app.use('/step2/', routes.step2);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
