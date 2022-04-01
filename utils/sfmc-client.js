@@ -24,6 +24,7 @@ const client = new FuelRest(options);
  * @returns {?Promise}
  */
 const saveData = async (externalKey, data) => {
+  console.log(data);
   client.post({
     uri: `/hub/v1/dataevents/key:${externalKey}/rowset`,
     headers: {
