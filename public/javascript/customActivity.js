@@ -45,13 +45,13 @@ function showStep(step, stepIndex) {
 
   switch (currentStep.key) {
     case "step1":
-      $("#step1").show();
+//      $("#step1").show();
       break;
     case "step2":
-      $("#step2").show();
+//      $("#step2").show();
       break;
     case "step3":
-      $("#step3").show();
+//      $("#step3").show();
       break;
   }
 }
