@@ -12,6 +12,7 @@ const logger = require('../utils/logger');
 exports.execute = async (req, res) => {
   logger.info(req.body);
   
+  const data;
   try {
     // decode data
     const data = JWT(req.body);
@@ -20,7 +21,7 @@ exports.execute = async (req, res) => {
     res.status(503).send({status:'invalid request'});
     return;
   }
-
+  
   logger.info(data);
 
   try {
