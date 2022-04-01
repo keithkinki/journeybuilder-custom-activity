@@ -22,7 +22,7 @@ exports.config = (req, res) => {
  */
 exports.ui = (req, res) => {
   res.render('index', {
-    title: 'Custom Activity',
+    title: 'Sandbox',
     dropdownOptions: [
       {
         name: 'Journey Entry',
@@ -35,3 +35,15 @@ exports.ui = (req, res) => {
     ],
   });
 };
+
+/**
+ * Render step2 UI
+ * @param req
+ * @param res
+ */
+exports.ui = (req, res) => {
+  res.render('step2', {
+    title: 'Sandbox'
+  });
+};
+
