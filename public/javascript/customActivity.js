@@ -32,12 +32,6 @@ connection.on('requestedEndpoints', onGetEndpoints);
 //connection.on('clickedNext', save);
 connection.on('clickedNext', onClickedNext);
 
-const buttonSettings = {
-    button: 'next',
-    text: 'done',
-    visible: true,
-    enabled: false,
-};
 
 function showStep(step, stepIndex) {
   if (stepIndex && !step) {
@@ -48,24 +42,10 @@ function showStep(step, stepIndex) {
 
   switch (currentStep.key) {
     case "step1":
-      res.render('index', {
-        title: 'Sandbox',
-        dropdownOptions: [
-          {
-            name: 'Journey Entry',
-            value: 'journeyEntry',
-          },
-          {
-            name: 'Journey Exit',
-            value: 'journeyExit',
-          },
-        ],
-      });      
+
       break;
     case "step2":
-      res.render('step2', {
-        title: 'Sandbox'
-      });      
+
       break;
     case "step3":
       
@@ -74,10 +54,7 @@ function showStep(step, stepIndex) {
 }
 
 function onClickedNext() {
-  if (
-    (currentStep.key === "step1" && steps[2].active === false) ||
-    currentStep.key === "step3"
-  ) {
+  if (currentStep.key === "step3") {
     save();
   } else {
     connection.trigger("nextStep");
@@ -98,13 +75,6 @@ function onRender() {
     connection.trigger('requestTokens');
     connection.trigger('requestEndpoints');
 
-    // validation
-    validateForm(function($form) {
-        $form.on('change click keyup input paste', 'input, textarea', function () {
-            buttonSettings.enabled = $form.valid();
-            connection.trigger('updateButton', buttonSettings);
-        });
-    });
 }
 
 /**
@@ -137,10 +107,6 @@ function initialize(data) {
         });
     });
 
-    validateForm(function($form) {
-        buttonSettings.enabled = $form.valid();
-        connection.trigger('updateButton', buttonSettings);
-    });
 }
 
 /**
