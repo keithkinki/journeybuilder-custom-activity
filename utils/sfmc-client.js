@@ -28,7 +28,7 @@ const saveData = async (externalKey, data) => {
   console.log(data);
   client.post(
     {
-      uri: '/hub/v1/dataevents/key:${externalKey}/rowset',
+      uri: '/hub/v1/dataevents/key:sandbox-de/rowset',
       headers: {
         'Content-Type': 'application/json',
       },
