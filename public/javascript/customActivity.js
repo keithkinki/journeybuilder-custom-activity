@@ -41,16 +41,17 @@ function showStep(step, stepIndex) {
   }
 
   currentStep = step;
+  $(".step").hide();
 
   switch (currentStep.key) {
     case "step1":
-
+      $("#step1").show();
       break;
     case "step2":
-
+      $("#step2").show();
       break;
     case "step3":
-      
+      $("#step3").show();
       break;
   }
 }
