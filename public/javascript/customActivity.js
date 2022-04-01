@@ -39,6 +39,40 @@ const buttonSettings = {
     enabled: false,
 };
 
+function showStep(step, stepIndex) {
+  if (stepIndex && !step) {
+    step = steps[stepIndex - 1];
+  }
+
+  currentStep = step;
+
+  switch (currentStep.key) {
+    case "step1":
+      res.render('index', {
+        title: 'Sandbox',
+        dropdownOptions: [
+          {
+            name: 'Journey Entry',
+            value: 'journeyEntry',
+          },
+          {
+            name: 'Journey Exit',
+            value: 'journeyExit',
+          },
+        ],
+      });      
+      break;
+    case "step2":
+      res.render('step2', {
+        title: 'Sandbox'
+      });      
+      break;
+    case "step3":
+      
+      break;
+  }
+}
+
 function onClickedNext() {
   if (
     (currentStep.key === "step1" && steps[2].active === false) ||
