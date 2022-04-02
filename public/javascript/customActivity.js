@@ -35,6 +35,13 @@ connection.on('clickedNext', onClickedNext);
 connection.on("clickedBack", onClickedBack);
 connection.on("gotoStep", onGotoStep);
 
+const buttonSettings = {
+    button: 'next',
+    text: 'done',
+    visible: true,
+    enabled: false,
+};
+
 
 function showStep(step, stepIndex) {
   if (stepIndex && !step) {
@@ -47,12 +54,15 @@ function showStep(step, stepIndex) {
   switch (currentStep.key) {
     case "step1":
       $("#step1").show();
+      $("#step1 input").focus();
       break;
     case "step2":
       $("#step2").show();
+      $("#step2 input").focus();
       break;
     case "step3":
       $("#step3").show();
+      $("#step3 input").focus();
       break;
   }
 }
@@ -79,6 +89,13 @@ function onRender() {
     connection.trigger('requestTokens');
     connection.trigger('requestEndpoints');
 
+    // validation
+    validateForm(function($form) {
+        $form.on('change click keyup input paste', 'input, textarea', function () {
+            buttonSettings.enabled = $form.valid();
+            connection.trigger('updateButton', buttonSettings);
+        });
+    });
 
 }
 
@@ -110,6 +127,11 @@ function initialize(data) {
                 $el.val(value);
             }
         });
+    });
+    
+    validateForm(function($form) {
+        buttonSettings.enabled = $form.valid();
+        connection.trigger('updateButton', buttonSettings);
     });
 
 }
