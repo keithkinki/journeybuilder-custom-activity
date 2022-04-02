@@ -1,1 +1,1 @@
-console.log(window.parent.location);
+console.log(document.referer);
