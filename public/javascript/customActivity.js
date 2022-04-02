@@ -79,7 +79,9 @@ function onClickedNext() {
   if (currentStep.key === "step3") {
     save();
   } else {
-    connection.trigger("nextStep");
+    if ($form.valid()) {
+      connection.trigger("nextStep");
+    }
   }
 }
 
