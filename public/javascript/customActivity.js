@@ -26,7 +26,11 @@ const validateForm = function(cb) {
             lastName: {
                 required: "The Last Name is a required / mandatory field"
             }
-        }
+        },
+        submitHandler: function(form) { },
+        errorPlacement: function () {
+          error.insertAfter(element);
+        },
     });
     cb($form);
 };
@@ -157,8 +161,7 @@ function onGetEndpoints(endpoints) {
  * Save settings
  */
 function save() {
-    validateForm(function ($form){});
-    if(!$form.valid()) {
+    if($form.valid()) {
         payload['metaData'].isConfigured = true;
 
         payload['arguments'].execute.inArguments = [
