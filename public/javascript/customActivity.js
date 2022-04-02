@@ -35,13 +35,6 @@ connection.on('clickedNext', onClickedNext);
 connection.on("clickedBack", onClickedBack);
 connection.on("gotoStep", onGotoStep);
 
-const buttonSettings = {
-    button: 'next',
-    text: 'done',
-    visible: true,
-    enabled: false,
-};
-
 
 function showStep(step, stepIndex) {
   if (stepIndex && !step) {
@@ -91,10 +84,7 @@ function onRender() {
 
     // validation
     validateForm(function($form) {
-        $form.on('change click keyup input paste', 'input, textarea', function () {
-            buttonSettings.enabled = $form.valid();
-            connection.trigger('updateButton', buttonSettings);
-        });
+
     });
 
 }
@@ -130,8 +120,6 @@ function initialize(data) {
     });
     
     validateForm(function($form) {
-        buttonSettings.enabled = $form.valid();
-        connection.trigger('updateButton', buttonSettings);
     });
 
 }
