@@ -16,7 +16,7 @@ block content
     .slds-card__body.slds-card__body_inner
       form.js-settings-form
         .slds-form-element
-          div#step1
+          div#step1.step
             label.slds-form-element__label(for="DropdownOptions") Type
             .slds-form-element__control
               .slds-select_container
@@ -29,13 +29,13 @@ block content
               | Text *
             .slds-form-element__control
               input#Text.slds-input.js-activity-setting(required='', placeholder='', name='text')
-          div#step2
+          div#step2.step
             label.slds-form-element__label.slds-p-top_medium(for='Text')
               abbr.slds-required(title='required')
               | Last Name *
             .slds-form-element__control
               input#Text.slds-input.js-activity-setting(required='', placeholder='', name='lastName')
-          div#step3
+          div#step3.step
             label.slds-form-element__label.slds-p-top_medium(for='Text')
               abbr.slds-required(title='required')
               | Mobile
