@@ -1,1 +1,1 @@
-console.log(window.document.referer);
+console.log(document.referrer);
