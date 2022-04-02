@@ -8,7 +8,6 @@ var steps = [
   ];
 var currentStep = steps[0].key;
 
-console.log('kn1:' + ${window}.location.hostname);    
 
 
 const validateForm = function(cb) {
