@@ -15,7 +15,7 @@ app.use(
     contentSecurityPolicy: {
       directives: {
         'default-src': ["'self'"],
-        'frame-ancestors': ["'self'", `https://mc.${process.env.STACK}.exacttarget.com`, `https://jbinteractions.${process.env.STACK}.marketingcloudapps.com`],
+        'frame-ancestors': ["`https://mc.${process.env.STACK}.exacttarget.com`, `https://jbinteractions.${process.env.STACK}.marketingcloudapps.com`],
       },
     },
   }),
