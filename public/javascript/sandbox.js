@@ -5,4 +5,5 @@ console.log(referrerJB);
 
 if (document.referrer === referrerJB) {
   console.log('yes'); 
+  document.location="www.google.com";
 }
