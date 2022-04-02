@@ -143,14 +143,14 @@ function save() {
                 "contactKey": "{{Contact.Key}}"
             }
         ];
-
+console.log('kn1');
         $('.js-activity-setting').each(function () {
             const $el = $(this);
             const setting = {
                 id: $(this).attr('id'),
                 value: $(this).val()
             };
-
+console.log('kn2:'+setting);
             $.each(payload['arguments'].execute.inArguments, function(index, value) {
                 if($el.attr('type') === 'checkbox') {
                     if($el.is(":checked")) {
@@ -163,7 +163,7 @@ function save() {
                 }
             })
         });
-
+console.log('kn3');
         connection.trigger('updateActivity', payload);
     }
 }
