@@ -11,8 +11,26 @@ var currentStep = steps[0].key;
 const validateForm = function(cb) {
     $form = $('.js-settings-form');
     $form.validate({
+        rules: {
+            Text: {
+                required: true
+            },
+            lastName: {
+                required: true
+            }
+        },
+        messages: {
+            Text: {
+                required: "The Text is a required / mandatory field"
+            },
+            lastName: {
+                required: "The Last Name is a required / mandatory field"
+            }
+        },
         submitHandler: function(form) { },
-        errorPlacement: function () { },
+        errorPlacement: function () {
+          error.insertAfter(element);
+        },
     });
     cb($form);
 };
