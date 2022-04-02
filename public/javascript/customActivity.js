@@ -163,7 +163,7 @@ function onGetTokens(tokens) {
  * @param {*} endpoints
  */
 function onGetEndpoints(endpoints) {
-    console.log(endpoints);
+    //console.log(endpoints);
 }
 
 /**
