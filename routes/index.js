@@ -36,14 +36,3 @@ exports.ui = (req, res) => {
   });
 };
 
-/**
- * Render step2 UI
- * @param req
- * @param res
- */
-exports.step2 = (req, res) => {
-  res.render('step2', {
-    title: 'Sandbox'
-  });
-};
-
