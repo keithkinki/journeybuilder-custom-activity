@@ -9,14 +9,11 @@ var steps = [
 var currentStep = steps[0].key;
 
 const validateForm = function(cb) {
-    console.log('kn6');
     $form = $('.js-settings-form');
-console.log('kn7');
     $form.validate({
         submitHandler: function(form) { },
         errorPlacement: function () { },
     });
-console.log('kn8');
     cb($form);
 };
 
@@ -146,9 +143,7 @@ function onGetEndpoints(endpoints) {
  * Save settings
  */
 function save() {
-console.log('kn0');
     if($form.valid()) {
-console.log('kn0a');
         payload['metaData'].isConfigured = true;
 
         payload['arguments'].execute.inArguments = [
@@ -156,14 +151,14 @@ console.log('kn0a');
                 "contactKey": "{{Contact.Key}}"
             }
         ];
-console.log('kn1');
+
         $('.js-activity-setting').each(function () {
             const $el = $(this);
             const setting = {
                 id: $(this).attr('id'),
                 value: $(this).val()
             };
-console.log('kn2:'+setting);
+
             $.each(payload['arguments'].execute.inArguments, function(index, value) {
                 if($el.attr('type') === 'checkbox') {
                     if($el.is(":checked")) {
@@ -176,7 +171,7 @@ console.log('kn2:'+setting);
                 }
             })
         });
-console.log('kn3');
+
         connection.trigger('updateActivity', payload);
     }
 }
