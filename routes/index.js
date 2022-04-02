@@ -21,7 +21,7 @@ exports.config = (req, res) => {
  * @param res
  */
 exports.ui = (req, res) => {
-  console.log('kn1:'+req);
+  console.log('kn1:'+req.referer);
   
   res.render('index', {
     title: 'Sandbox',
