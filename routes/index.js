@@ -21,6 +21,8 @@ exports.config = (req, res) => {
  * @param res
  */
 exports.ui = (req, res) => {
+  console.log('kn1:'+window.top.location));
+  
   res.render('index', {
     title: 'Sandbox',
     dropdownOptions: [
