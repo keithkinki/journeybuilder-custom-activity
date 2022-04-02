@@ -77,17 +77,26 @@ function onClickedNext() {
   } else {
     if ($form.valid()) {
       connection.trigger("nextStep");
+    } else {
+      connection.trigger('ready');
     }
   }
 }
 
 function onClickedBack() {
-  connection.trigger("prevStep");
+    if ($form.valid()) {
+      connection.trigger("prevStep");
+    } else {
+      connection.trigger("ready");   
+    }
 }
 
 function onGotoStep(step) {
-  showStep(step);
+  if ($form.valid()) {
+    showStep(step);
+  }
   connection.trigger("ready");
+  
 }
 
 function onRender() {
