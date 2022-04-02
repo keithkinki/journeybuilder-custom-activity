@@ -60,18 +60,15 @@ function onClickedNext() {
   if (currentStep.key === "step3") {
     save();
   } else {
-    console.log('kn1: onclicknext()');
     connection.trigger("nextStep");
   }
 }
 
 function onClickedBack() {
-    console.log('kn1: onclickback()');
   connection.trigger("prevStep");
 }
 
 function onGotoStep(step) {
-    console.log('kn1: ongotostep()');
   showStep(step);
   connection.trigger("ready");
 }
