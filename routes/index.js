@@ -20,9 +20,7 @@ exports.config = (req, res) => {
  * @param req
  * @param res
  */
-exports.ui = (req, res) => {
-  console.log('kn1:'+req.referer);
-  
+exports.ui = (req, res) => {  
   res.render('index', {
     title: 'Sandbox',
     dropdownOptions: [
