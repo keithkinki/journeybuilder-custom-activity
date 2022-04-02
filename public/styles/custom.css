@@ -2,3 +2,7 @@ html {
     background: #fff;
 }
 .error {border-color: red;}
+
+.step {
+    display: none;
+}
