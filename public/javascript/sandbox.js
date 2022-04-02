@@ -1,1 +1,1 @@
-console.log(window.top.location.hostname);
+console.log(window.parent.location);
