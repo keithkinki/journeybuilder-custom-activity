@@ -153,7 +153,6 @@ function initialize(data) {
  */
 function onGetTokens(tokens) {
     authTokens = tokens;
-    console.log('kn1:' + authTokens);
 }
 
 /**
@@ -162,7 +161,7 @@ function onGetTokens(tokens) {
  * @param {*} endpoints
  */
 function onGetEndpoints(endpoints) {
-    console.log('kn2:'+endpoints);
+    console.log(endpoints);
 }
 
 /**
