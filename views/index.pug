@@ -16,17 +16,30 @@ block content
     .slds-card__body.slds-card__body_inner
       form.js-settings-form
         .slds-form-element
-          label.slds-form-element__label(for="DropdownOptions") Type
-          .slds-form-element__control
-            .slds-select_container
-              select#DropdownOptions.slds-select.js-activity-setting(name='dropdownOptions')
-                each dropdownOption in dropdownOptions
-                  option(value=dropdownOption.value)= dropdownOption.name
-              
-          label.slds-form-element__label.slds-p-top_medium(for='Text')
-            abbr.slds-required(title='required')
-            | Text *
-          .slds-form-element__control
-            input#Text.slds-input.js-activity-setting(required='', placeholder='', name='text')
+          div#step1
+            label.slds-form-element__label(for="DropdownOptions") Type
+            .slds-form-element__control
+              .slds-select_container
+                select#DropdownOptions.slds-select.js-activity-setting(name='dropdownOptions')
+                  each dropdownOption in dropdownOptions
+                    option(value=dropdownOption.value)= dropdownOption.name
+
+            label.slds-form-element__label.slds-p-top_medium(for='Text')
+              abbr.slds-required(title='required')
+              | Text *
+            .slds-form-element__control
+              input#Text.slds-input.js-activity-setting(required='', placeholder='', name='text')
+          div#step2
+            label.slds-form-element__label.slds-p-top_medium(for='Text')
+              abbr.slds-required(title='required')
+              | Last Name *
+            .slds-form-element__control
+              input#Text.slds-input.js-activity-setting(required='', placeholder='', name='lastName')
+          div#step3
+            label.slds-form-element__label.slds-p-top_medium(for='Text')
+              abbr.slds-required(title='required')
+              | Mobile
+            .slds-form-element__control
+              input#Text.slds-input.js-activity-setting(placeholder='', name='Mobile')
 
     footer.slds-card__footer
