@@ -1,5 +1,6 @@
+console.log('kn1:');
 console.log(document.referrer);
-var referrerJB = 'https://jbinteractions.${process.env.STACK}.marketingcloudapps.com'
+var referrerJB = 'https://jbinteractions.s4.marketingcloudapps.com'
 console.log(referrerJB);
 
 if (document.referrer === referrerJB) {
