@@ -26,11 +26,7 @@ const validateForm = function(cb) {
             lastName: {
                 required: "The Last Name is a required / mandatory field"
             }
-        },
-        submitHandler: function(form) { },
-        errorPlacement: function () {
-          error.insertAfter(element);
-        },
+        }
     });
     cb($form);
 };
