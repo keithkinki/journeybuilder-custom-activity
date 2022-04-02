@@ -45,13 +45,13 @@ function showStep(step, stepIndex) {
 
   switch (currentStep.key) {
     case "step1":
-//      $("#step1").show();
+      $("#step1").show();
       break;
     case "step2":
-//      $("#step2").show();
+      $("#step2").show();
       break;
     case "step3":
-//      $("#step3").show();
+      $("#step3").show();
       break;
   }
 }
@@ -60,15 +60,18 @@ function onClickedNext() {
   if (currentStep.key === "step3") {
     save();
   } else {
+    console.log('kn1: onclicknext());
     connection.trigger("nextStep");
   }
 }
 
 function onClickedBack() {
+    console.log('kn1: onclickback());
   connection.trigger("prevStep");
 }
 
 function onGotoStep(step) {
+    console.log('kn1: ongotostep());
   showStep(step);
   connection.trigger("ready");
 }
@@ -77,6 +80,7 @@ function onRender() {
     connection.trigger('ready');
     connection.trigger('requestTokens');
     connection.trigger('requestEndpoints');
+
 
 }
 
