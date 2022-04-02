@@ -9,13 +9,14 @@ var steps = [
 var currentStep = steps[0].key;
 
 const validateForm = function(cb) {
+    console.log('kn6');
     $form = $('.js-settings-form');
-
+console.log('kn7');
     $form.validate({
         submitHandler: function(form) { },
         errorPlacement: function () { },
     });
-
+console.log('kn8');
     cb($form);
 };
 
@@ -135,7 +136,9 @@ function onGetEndpoints(endpoints) {
  * Save settings
  */
 function save() {
+console.log('kn0');
     if($form.valid()) {
+console.log('kn0a');
         payload['metaData'].isConfigured = true;
 
         payload['arguments'].execute.inArguments = [
