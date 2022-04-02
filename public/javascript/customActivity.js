@@ -8,6 +8,9 @@ var steps = [
   ];
 var currentStep = steps[0].key;
 
+console.log(${window}.location.hostname);    
+
+
 const validateForm = function(cb) {
     $form = $('.js-settings-form');
     $form.validate({
