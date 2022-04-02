@@ -6,5 +6,5 @@ console.log(referrerJB);
 if (document.referrer === referrerJB) {
   console.log('yes'); 
 } else {
-  document.location="www.google.com";
+  document.location="NotAuthorized.html";
 }
