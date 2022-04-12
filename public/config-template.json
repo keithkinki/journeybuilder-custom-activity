@@ -102,7 +102,7 @@
             "label": "MyCustomLabel"
         }
     }
-]
+],
 	"schema": {
 		"arguments": {
 			"execute": {
