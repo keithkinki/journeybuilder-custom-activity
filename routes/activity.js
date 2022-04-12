@@ -23,7 +23,7 @@ exports.execute = async (req, res) => {
   }
   
   logger.info('a1');
-  logger.info(data.inArguments.myInArgument);
+  logger.info(data.inArguments[0].myInArgument);
   logger.info('b1');
   
   logger.info(data);
