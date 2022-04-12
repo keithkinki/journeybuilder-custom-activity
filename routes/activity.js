@@ -22,7 +22,7 @@ exports.execute = async (req, res) => {
     return;
   }
   
-  logger.info(data.inArguments.size());
+  logger.info(data.inArguments.length());
   
   logger.info(data);
 
