@@ -43,9 +43,6 @@
         }
       ],
       "outArguments": [
-        {
-          "foundSignupDate": ""
-        }
       ],        
       "url": "https://sandbox-kn.herokuapp.com/journey/execute",
       "verb": "POST",
