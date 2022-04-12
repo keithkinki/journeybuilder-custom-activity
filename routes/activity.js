@@ -21,13 +21,7 @@ exports.execute = async (req, res) => {
     res.status(503).send({status:'invalid request'});
     return;
   }
-  
-  logger.info('a1');
-  logger.info('bb-'+ data.inArguments[0].myInArgument + '-cc');
-  logger.info('b1');
-  logger.info('cc-' + data.inArguments[0]);
-  logger.info('dd');
-  
+    
   logger.info(data);
 
   try {
@@ -49,9 +43,17 @@ exports.execute = async (req, res) => {
     logger.error(error);
   }
 
+  /*
   res.status(200).send({
     status: 'ok',
   });
+  */
+  
+  const responseObject= {
+    discount: 123,
+    discountCode: 'abcdef'
+  }
+  return res.status(200).json(responseObject);
 };
 
 /**
