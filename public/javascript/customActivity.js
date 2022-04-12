@@ -181,7 +181,7 @@ function save() {
                 "emailAddress": "{{InteractionDefaults.Email}}"
             },
             {
-                "EventEmailAddress:": "{{Event.APIEvent-245eb19a-17c8-4114-d43a-c52ef3fa3306.Data.EmailAddress}}"
+                "EventEmailAddress:": "{{Contact.Attribute.sandbox-de.Event}}"
             }
         ];
 
