@@ -181,7 +181,7 @@ function save() {
                 "emailAddress": "{{InteractionDefaults.Email}}"
             },
             {
-                "EventEmailAddress:": "{{Contact.Attribute.sandbox-de.Event}}"
+                "DEText:": "{{Contact.Attribute.testde.Text}}"
             }
         ];
 
