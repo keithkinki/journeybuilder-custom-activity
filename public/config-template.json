@@ -80,6 +80,47 @@
       "size": "scm-sm"
     }
   },
+	outcomes: [{
+        arguments: {
+          branchResult: 'no_activity'
+        },
+        metaData: {
+          label: 'No Activity'
+        }
+      },
+      {
+        arguments: {
+          branchResult: 'viewed_item'
+        },
+        metaData: {
+          label: 'Viewed Item'
+        }
+      },
+      {
+        arguments: {
+          branchResult: 'abandoned_cart'
+        },
+        metaData: {
+          label: 'Abandoned Cart'
+        }
+      },
+      {
+        arguments: {
+          branchResult: 'purchased_item'
+        },
+        metaData: {
+          label: 'Purchased Item'
+        }
+      },
+      {
+        arguments: {
+          branchResult: 'invalid_code'
+        },
+        metaData: {
+          label: 'Invalid Code'
+        }
+      }
+    ],
 	"schema": {
 		"arguments": {
 			"execute": {
