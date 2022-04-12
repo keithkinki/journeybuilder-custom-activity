@@ -86,7 +86,7 @@
 			"execute": {
 				"inArguments": [{
 					"myInArgument": {
-						"dataType": "String",
+						"dataType": "Text",
 						"isNullable": false,
 						"direction": "in"
 					}
