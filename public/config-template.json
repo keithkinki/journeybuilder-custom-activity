@@ -37,7 +37,7 @@
 	},
   "arguments": {
     "execute": {
-      "inArguments": {
+      "inArguments": [
 	{
           "myInArgument": "{{Contact.Key}}"
         }
