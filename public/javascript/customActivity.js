@@ -181,7 +181,7 @@ function save() {
                 "emailAddress": "{{InteractionDefaults.Email}}"
             },
             {
-                "DEText:": "{{Contact.Attribute.testde.Text}}"
+                "DEText:": "{{Contact.Attribute.TestDE.Text}}"
             }
         ];
 
