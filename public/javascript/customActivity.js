@@ -176,6 +176,9 @@ function save() {
         payload['arguments'].execute.inArguments = [
             {
                 "contactKey": "{{Contact.Key}}"
+            },
+            {
+                "emailAddress": "{{InteractionDefaults.Email}}"
             }
         ];
 
