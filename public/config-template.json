@@ -39,11 +39,10 @@
     "execute": {
       "inArguments": [
 	{
-          "myInArgument": "{{Contact.Key}}"
+          "myInArgument": "testing123"
         }
       ],
-      "outArguments": [
-      ],        
+      "outArguments": [],        
       "url": "https://sandbox-kn.herokuapp.com/journey/execute",
       "verb": "POST",
       "body": "",
