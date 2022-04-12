@@ -39,16 +39,7 @@
     "execute": {
       "inArguments": {
 	{
-          "contactIdentifier": "{{Contact.Key}}"
-        },
-        {
-          "emailAddress": "{{InteractionDefaults.Email}}"
-        },
-        {
-          "twitterHandle": "{{Contact.Default.Twitter}}"
-        },
-        {
-          "lastLogin": "{{Contact.Attribute.Engagement.LastLogin}}"
+          "myInArgument": "{{Contact.Key}}"
         }
       ],
       "outArguments": [
@@ -92,5 +83,19 @@
       "hideHeader": true,
       "size": "scm-sm"
     }
-  }
+  },
+	"schema": {
+		"arguments": {
+			"execute": {
+				"inArguments": [{
+					"myInArgument": {
+						"dataType": "String",
+						"isNullable": false,
+						"direction": "in"
+					}
+				}],
+				"outArguments": []
+			}
+		}
+	}
 }
