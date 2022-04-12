@@ -37,6 +37,25 @@
 	},
   "arguments": {
     "execute": {
+      "inArguments": {
+	{
+          "contactIdentifier": "{{Contact.Key}}"
+        },
+        {
+          "emailAddress": "{{InteractionDefaults.Email}}"
+        },
+        {
+          "twitterHandle": "{{Contact.Default.Twitter}}"
+        },
+        {
+          "lastLogin": "{{Contact.Attribute.Engagement.LastLogin}}"
+        }
+      ],
+      "outArguments": [
+        {
+          "foundSignupDate": ""
+        }
+      ],        
       "url": "https://sandbox-kn.herokuapp.com/journey/execute",
       "verb": "POST",
       "body": "",
