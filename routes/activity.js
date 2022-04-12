@@ -26,7 +26,7 @@ exports.execute = async (req, res) => {
   logger.info('bb-'+ data.inArguments[0].myInArgument + 'cc');
   logger.info('b1');
   logger.info('cc-' + data.inArguments[0]);
-  logger.info('dd-' + data.inArguments[1].inArguments);
+  logger.info('dd-' + data.inArguments[1].myInArgument);
   logger.info('dd');
   
   logger.info(data);
