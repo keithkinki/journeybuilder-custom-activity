@@ -139,6 +139,7 @@ function initialize(data) {
                 $el.prop('checked', value === 'true');
             } else {
                 $el.val(value);
+                console.log('kn1:' + value);
             }
         });
     });
