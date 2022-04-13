@@ -121,6 +121,8 @@ function initialize(data) {
     if (data) {
         payload = data;
     }
+    console.log('initilize data');
+    console.log(data);
     const hasInArguments = Boolean(
         payload['arguments'] &&
         payload['arguments'].execute &&
